@@ -51,3 +51,17 @@ const flatArrSum = flatArr.reduce((acc, currentValue) => {
 }, 0)
 console.log(":::4::: sum of flatArr: ", flatArrSum)
 cut()
+// :::5::: 
+// Counting instances of values in an object
+const rhacodactylus =  ["ciliatus", "auriculatus", "leachianus", "trachycephalus", "trachyrhynchus", "chahoua", "sarasinorum"]
+
+const countRhacodactylus = rhacodactylus.reduce((arten, art) => {
+    const currentCount = arten[art] ?? 0;
+    return {
+        ...arten,
+        [art]: currentCount + 1,
+    };
+}, {});
+
+console.log(":::5::: bekannte Arten des Genus Rhacodactylus: ", rhacodactylus)
+
